@@ -6,6 +6,7 @@ import ListTimers from "./components/ListTimers";
 function App() {
   return (
     <div className="App">
+      <h1>TMRZ</h1>
       <NewTimer />
       <ListTimers />
     </div>

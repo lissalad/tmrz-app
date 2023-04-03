@@ -6,7 +6,7 @@ export default function Timer({ index, name, time, isRunning }) {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="Timer">
       <h2>{name}</h2>
       <h1>{formatTime(time)}</h1>
       <button onClick={() => dispatch(toggleTimer(index))}>

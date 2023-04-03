@@ -9,7 +9,7 @@ export default function NewTimer() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="NewTimer">
       <input
         type="text"
         placeholder="New Timer Name"
