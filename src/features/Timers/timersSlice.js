@@ -24,9 +24,18 @@ export const timersSlice = createSlice({
         }
       });
     },
+
+    resetTimer: (state, action) => {
+      if (state.value[action.payload].isRunning) {
+        state.value[action.payload].isRunning = // just calling toggleTimer didnt work
+          !state.value[action.payload].isRunning;
+      }
+      state.value[action.payload].time = 0;
+    },
   },
 });
 
-export const { addTimer, toggleTimer, update } = timersSlice.actions;
+export const { addTimer, toggleTimer, update, resetTimer } =
+  timersSlice.actions;
 
 export default timersSlice.reducer;

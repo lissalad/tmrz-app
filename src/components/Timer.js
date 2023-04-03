@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { toggleTimer } from "../features/timers/timersSlice";
+import { toggleTimer, resetTimer } from "../features/timers/timersSlice";
 import { formatTime } from "../utils";
 
 export default function Timer({ index, name, time, isRunning }) {
@@ -12,6 +12,7 @@ export default function Timer({ index, name, time, isRunning }) {
       <button onClick={() => dispatch(toggleTimer(index))}>
         {isRunning ? "Stop" : "Start"}
       </button>
+      <button onClick={() => dispatch(resetTimer(index))}>Reset</button>
     </div>
   );
 }
