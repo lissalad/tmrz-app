@@ -7,12 +7,25 @@ export default function Timer({ index, name, time, isRunning }) {
 
   return (
     <div className="Timer">
-      <h2>{name}</h2>
-      <h1>{formatTime(time)}</h1>
-      <button onClick={() => dispatch(toggleTimer(index))}>
-        {isRunning ? "Stop" : "Start"}
-      </button>
-      <button onClick={() => dispatch(resetTimer(index))}>Reset</button>
+      <div className="timer-info">
+        <h2>{name}</h2>
+        <h1>{formatTime(time)}</h1>
+      </div>
+
+      <div className="buttons">
+        <button
+          onClick={() => dispatch(toggleTimer(index))}
+          className={isRunning ? "stop-button" : "start-button"}
+        >
+          {isRunning ? "Stop" : "Start"}
+        </button>
+        <button
+          onClick={() => dispatch(resetTimer(index))}
+          className="reset-button"
+        >
+          Reset
+        </button>
+      </div>
     </div>
   );
 }

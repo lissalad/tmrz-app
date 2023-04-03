@@ -1,8 +1,40 @@
+/* ------------------------------------------- */
+/* Header */
+
+.header {
+  background-color: rgb(172, 199, 199);
+  margin: 0;
+  padding: .8em;
+  color: rgb(81, 103, 103);
+}
+
+.header > h1 {
+  width: 100%;
+  text-align: center;
+}
+
+/* ------------------------------------------- */
+/* App */
+
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin: 2rem;
+  color: rgb(45, 52, 52);
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+button {
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* ------------------------------------------- */
@@ -11,23 +43,28 @@
 .NewTimer {
 	display: flex;
 	justify-content: center;
+  color: rgb(45, 52, 52);
+
 }
 
 .NewTimer > input {
 	font-size: 1rem;
-	padding: 0.25rem 0.5rem;
+	padding: 0.5rem .75rem;
 	border-radius: 0.5rem 0 0 0.5rem;
-	border: 1px solid;
+	border: 2px solid rgb(172, 199, 199);
 	margin: 0;
+  background-color: rgb(223, 234, 234);
+  ;
 }
 
 .NewTimer > button {
 	font-size: 1rem;
 	padding: 0.25rem 0.5rem;
 	border-radius: 0 0.5rem 0.5rem 0;
-	border: 1px solid #000;
+	border: 0px solid rgb(172, 199, 199);
+  border-left: 0;
 	margin: 0;
-	background-color: #000;
+	background-color: rgb(54, 113, 113);
 	color: #fff;
 	font-weight: bold;
 }
@@ -39,28 +76,79 @@
 	width: 320px;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	align-items: baseline;
+  justify-content: space-between;
+  border: 4px solid rgb(42, 118, 118);
+  background-color: rgb(96, 136, 136);
+  padding: 18px 24px;
+  border-radius: 16px;
+  /* width: fit-content; */
+  color:aliceblue;
+  gap: 16px;
 }
 
-.Timer > h1 {
-	flex:1;
-	margin: 1rem;
+.Timer > .timer-info > h1 {
+	/* flex:1; */
+	/* margin: 1rem; */
 	text-align: left;
 	font-variant-numeric: tabular-nums;
+  font-size: 50px;
 }
 
-.Timer > h2 {
+.Timer > .timer-info > h2 {
 	flex: 1;
+  text-transform: capitalize;
+  font-size: 20px;
+  font-weight: 500;
 }
 
-.Timer > button {
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.Timer > .buttons > button {
 	padding: 0.25rem 0.5rem;
 	border-radius: 0.5rem;
-	border: 1px solid #000;
-	background-color: #000;
-	color: #fff;
+
+	/* background-color: #000; */
 	font-size: 1rem;
 	font-weight: bold;
 	width: 4rem;
+}
+
+.timer-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.reset-button {
+  color: rgb(70, 70, 70);
+  background-color: rgb(152, 152, 152);
+	border: 2px solid rgb(179, 179, 179);
+}
+
+.stop-button {
+  color: rgb(114, 56, 47);
+  background-color: rgb(202, 119, 105);
+  border: 2px solid rgb(230, 159, 145);
+}
+
+.start-button {
+  color:rgb(53, 99, 53);
+  background-color: rgb(129, 192, 129);
+  border: 2px solid rgb(148, 203, 148);
+}
+
+/* ------------------------------------------- */
+/* ListTimers */
+
+.timers-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 40px;
+  width: fit-content;
 }
