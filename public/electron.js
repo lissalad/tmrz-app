@@ -1,6 +1,5 @@
 const electron = require("electron");
-const app = electron.app;
-const BrowserWindow = electron.BrowserWindow;
+const { app, BrowserWindow, screen } = require("electron");
 
 const path = require("path");
 const isDev = require("electron-is-dev");
@@ -8,9 +7,11 @@ const isDev = require("electron-is-dev");
 let mainWindow;
 
 function createWindow() {
+  const { width, height } = screen.getPrimaryDisplay().workAreaSize;
+
   mainWindow = new BrowserWindow({
-    width: 900,
-    height: 680,
+    width: width,
+    height: height,
     webPreferences: {
       nodeIntegration: true,
     },

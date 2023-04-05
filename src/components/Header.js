@@ -1,7 +1,16 @@
+import { PlusIcon } from "./Icons";
+import { useState } from "react";
+import NewTimer from "./NewTimer";
+
 export default function Header() {
   return (
-    <div className="header">
-      <h1>TMRZ</h1>
+    <div>
+      <div className="header">
+        <p>TMRZ</p>
+        {/* <button>
+          <NewTimer />
+        </button> */}
+      </div>
     </div>
   );
 }

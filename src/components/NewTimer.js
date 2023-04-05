@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 
 // We need to import our action to add a new timer
 import { addTimer } from "../features/timers/timersSlice";
+import { PlusIcon } from "./Icons";
 
 export default function NewTimer() {
   const [name, setName] = useState("");
@@ -18,7 +19,10 @@ export default function NewTimer() {
         onChange={(e) => setName(e.target.value)}
       />
 
-      <button onClick={() => dispatch(addTimer(name))}>Save</button>
+      <button onClick={() => dispatch(addTimer(name))}>
+        {/* <PlusIcon /> */}
+        save
+      </button>
     </div>
   );
 }

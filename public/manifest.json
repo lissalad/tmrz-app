@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "TMRZ",
+  "name": "learning electron",
   "icons": [
     {
       "src": "favicon.ico",
